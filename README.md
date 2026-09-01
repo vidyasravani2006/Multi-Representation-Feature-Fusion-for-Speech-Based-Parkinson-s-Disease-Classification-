@@ -66,4 +66,63 @@ MobileNetV3-Small
        ↓
 Classification
        ↓
-Performance Evaluation 
+Performance Evaluation
+
+## ▶️ How to Run
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/vidyasravani2006/Voice-Based-Disease-Detection.git
+cd Voice-Based-Disease-Detection
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Download the Dataset
+
+- Download the Italian Parkinson's Disease Dataset.
+- The project uses the Italian Parkinson's Disease Dataset hosted on Kaggle.
+- Add the dataset to your Kaggle Notebook before running the project.
+- The notebook uses the following Kaggle dataset path:
+
+Example:
+
+```python
+DATASET_PATH = "/kaggle/input/datasets/vidyasravanich/"
+        "italian-pd-dataset/italian PD dataset"
+```
+
+### 4. Open the Notebook
+
+```bash
+Open the project notebook in Kaggle.
+Click Add Input.
+Search for and add the Italian Parkinson's Disease Dataset.
+Verify that the dataset path matches:
+DATASET_PATH = "/kaggle/input/datasets/vidyasravanich/italian-pd-dataset/italian PD dataset"
+Select GPU in the Kaggle Notebook settings.
+Run the notebook cells sequentially from top to bottom.
+```
+
+### 5. Run the Project
+
+Run the notebook cells sequentially:
+
+1. Load and preprocess audio files.
+2. Extract Mel Spectrogram, Gammatone, and CQT features.
+3. Apply CSRLM, FIEM, and ASFM modules.
+4. Train the MobileNetV3-Small model with online augmentation.
+5. Evaluate the model using Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
+
+### 6. View Results
+
+The notebook generates:
+
+- Classification Metrics
+- Confusion Matrix
+- Model Performance Results
